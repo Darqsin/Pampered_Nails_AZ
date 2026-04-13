@@ -1,17 +1,129 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Booking</title>
-<link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Booking | Pampered Nails AZ by Elena</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-<h1>Book Appointment</h1>
-<form id="form">
-<input placeholder="Name" required>
-<input placeholder="Email" required>
-<input placeholder="Phone" required>
-<button>Save</button>
-</form>
-<script src="script.js"></script>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a href="index.html" class="logo-wrap">
+        <span class="logo-mark">PN</span>
+        <span class="logo-text">Pampered Nails AZ by Elena</span>
+      </a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Open menu">☰</button>
+      <nav class="site-nav" id="siteNav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a class="active nav-cta" href="booking.html">Book Now</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container centered narrow">
+        <p class="eyebrow">Booking</p>
+        <h1>Reserve your appointment</h1>
+        <p>Select an available date in the next 60 days and save your booking request locally.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container booking-grid">
+        <div class="panel">
+          <div class="panel-head">
+            <h2>Availability Calendar</h2>
+            <p>Choose an open date to continue.</p>
+          </div>
+
+          <div class="calendar-toolbar">
+            <button id="prevMonth" type="button" class="calendar-btn">←</button>
+            <h3 id="calendarTitle">Month Year</h3>
+            <button id="nextMonth" type="button" class="calendar-btn">→</button>
+          </div>
+
+          <div class="calendar-weekdays">
+            <span>Sun</span><span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span>
+          </div>
+          <div id="calendar" class="calendar-grid"></div>
+
+          <div class="legend-row">
+            <span><span class="legend available"></span>Available</span>
+            <span><span class="legend booked"></span>Booked</span>
+            <span><span class="legend selected"></span>Selected</span>
+          </div>
+        </div>
+
+        <div class="panel">
+          <div class="panel-head">
+            <h2>Appointment Request</h2>
+            <p>Selected Date: <strong id="selectedDateText">None selected</strong></p>
+          </div>
+
+          <form id="bookingForm" class="booking-form">
+            <div class="field"><label for="name">Name</label><input id="name" name="name" type="text" required placeholder="Your full name" /></div>
+            <div class="field"><label for="email">Email</label><input id="email" name="email" type="email" required placeholder="you@example.com" /></div>
+            <div class="field"><label for="phone">Phone</label><input id="phone" name="phone" type="tel" required placeholder="(555) 555-5555" /></div>
+            <div class="field">
+              <label for="service">Service</label>
+              <select id="service" name="service" required>
+                <option value="">Select a service</option>
+                <option value="Gel Nails">Gel Nails</option>
+                <option value="Russian Manicure">Russian Manicure</option>
+                <option value="Dry Pedicure">Dry Pedicure</option>
+                <option value="Structured Gel">Structured Gel</option>
+                <option value="Acrylic Full Set">Acrylic Full Set</option>
+                <option value="Acrylic Fill">Acrylic Fill</option>
+                <option value="Custom Nail Art">Custom Nail Art</option>
+              </select>
+            </div>
+            <div class="field"><label for="notes">Notes</label><textarea id="notes" name="notes" rows="4" placeholder="Optional details"></textarea></div>
+            <button type="submit" class="btn btn-primary full">Save Appointment</button>
+          </form>
+
+          <div id="formMessage" class="form-message"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section soft-section">
+      <div class="container booking-grid secondary-booking-grid">
+        <div class="panel">
+          <div class="panel-head">
+            <h2>Google Calendar Embed</h2>
+            <p>Replace the iframe source later with your public Google Calendar link if needed.</p>
+          </div>
+          <div class="embed-wrap">
+            <iframe src="https://calendar.google.com/calendar/embed?height=500&wkst=1&bgcolor=%23ffffff&ctz=America%2FPhoenix" style="border:0" width="100%" height="500" frameborder="0" scrolling="no" title="Google Calendar"></iframe>
+          </div>
+        </div>
+
+        <div class="panel">
+          <div class="panel-head">
+            <h2>Saved Appointments</h2>
+            <p>Stored in your browser for demo use.</p>
+          </div>
+          <div id="appointmentsList" class="appointments-list"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div><h3>Pampered Nails AZ by Elena</h3><p>Luxury nail services by licensed nail technician Elena.</p></div>
+      <div><p><strong>Pages</strong></p><p><a href="services.html">Services</a></p><p><a href="gallery.html">Gallery</a></p><p><a href="about.html">About</a></p></div>
+      <div><p><strong>Social</strong></p><p><a href="https://www.instagram.com/pamperednails_az/" target="_blank" rel="noopener noreferrer">Instagram</a></p><p><a href="https://www.facebook.com/elena.elena.615174#" target="_blank" rel="noopener noreferrer">Facebook</a></p></div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
