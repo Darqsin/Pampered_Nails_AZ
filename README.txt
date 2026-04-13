@@ -1,21 +1,8 @@
-Pampered Nails AZ by Elena
+Pampered Nails AZ by Elena v2
 
-Files included:
-- index.html
-- services.html
-- gallery.html
-- about.html
-- booking.html
-- styles.css
-- script.js
+This version uses the 3 exact Instagram URLs provided by the user:
+- https://www.instagram.com/p/DV7ZRTTickq/
+- https://www.instagram.com/p/DVxTOz0DlcO/
+- https://www.instagram.com/reel/DPq8rsNEQWj/
 
-How to use:
-1. Extract the ZIP.
-2. Open index.html to preview locally.
-3. Upload all files to your GitHub repository root.
-4. GitHub Pages will publish the updated site automatically.
-
-Notes:
-- Instagram content uses public embeds.
-- Booking form stores appointments in localStorage for demo use.
-- Google Calendar area is an embed placeholder you can replace later.
+Upload all files to the GitHub repo root to replace the prior version.
